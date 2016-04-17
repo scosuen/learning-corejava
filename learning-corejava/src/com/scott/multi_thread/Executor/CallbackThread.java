@@ -1,4 +1,4 @@
-package com.scott.multi_thread.callback_thread;
+package com.scott.multi_thread.Executor;
 
 import java.util.concurrent.Callable;
 import java.util.concurrent.ExecutionException;
@@ -9,14 +9,14 @@ import java.util.concurrent.Future;
 public class CallbackThread {
 
 	public static void main(String[] args) throws ExecutionException, InterruptedException {
-		ExecutorService pool = Executors.newFixedThreadPool(2);
+		ExecutorService executorServicexecutorService = Executors.newFixedThreadPool(2);
 		Callable c1 = new MyCallable("A");
 		Callable c2 = new MyCallable("B");
-		Future f1 = pool.submit(c1);
-		Future f2 = pool.submit(c2);
+		Future f1 = executorServicexecutorService.submit(c1);
+		Future f2 = executorServicexecutorService.submit(c2);
 		System.out.println(f1.get().toString());
 		System.out.println(f2.get().toString());
-		pool.shutdown();
+		executorServicexecutorService.shutdown();
 	}
 }
 
