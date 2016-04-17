@@ -1,4 +1,4 @@
-package com.scott.design_pattern.atomic;
+package com.scott.multi_thread.atomic;
 
 import java.util.concurrent.atomic.AtomicIntegerFieldUpdater;
 
