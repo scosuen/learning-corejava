@@ -1,4 +1,4 @@
-package com.scott.functional_programming.stream;
+package com.scott.functional_programming.optional;
 
 import java.util.Optional;
 import java.util.stream.Stream;
@@ -12,17 +12,17 @@ public class OptionalTest1 {
 
 		longest.ifPresent(name -> {
 			result = name.toUpperCase();
-
 		});
 
 		result = longest.orElse("Nimrod");
-		System.out.println("The longest name is " + result);
-
+		
 		result = longest.orElseGet(() -> {
 			// perform some interesting code operation
 			// then return the alternate value.
 			return "Nimrod";
 		});
+		
+		System.out.println("The longest name is " + result);
 
 		Optional<String> lNameInCaps = longest.map(String::toUpperCase);
 		// System.out.println(lNameInCaps.get());

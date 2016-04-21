@@ -3,7 +3,7 @@ package com.scott.functional_programming.function_package;
 import java.util.function.Consumer;
 import java.util.function.Predicate;
 
-public class PredicateTest {
+public class PredicateConsumerTest {
 	public static Student updateStudentFee(Student student, Predicate<Student> predicate, Consumer<Student> consumer) {
 		// Use the predicate to decide when to update the discount.
 		if (predicate.test(student)) {
