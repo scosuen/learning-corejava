@@ -14,11 +14,16 @@ public class CallableTest {
 		ExecutorService executorService = Executors.newCachedThreadPool();
 		List<Future<String>> resultList = new ArrayList<Future<String>>();
 
+		
+		int j = 1;
 		// 创建10个任务并执行
 		for (int i = 0; i < 10; i++) {
-			// 使用ExecutorService执行Callable类型的任务，并将结果保存在future变量中
-			Future<String> future = executorService.submit(new TaskWithResult(i));
-			// 将任务执行结果存储到List中
+//			Future<String> future = executorService.submit(new TaskWithResult(i));
+			
+			
+			Future<String> future = executorService.submit(() -> {
+				return "" + j;
+			});
 			resultList.add(future);
 		}
 
@@ -51,8 +56,7 @@ class TaskWithResult implements Callable<String> {
 	 * 任务的具体过程，一旦任务传给ExecutorService的submit方法， 则该方法自动在一个线程上执行
 	 */
 	public String call() throws Exception {
-		System.out.println("call()方法被自动调用！！！    " + Thread.currentThread().getName());
 		// 该返回结果将被Future的get方法得到
-		return "call()方法被自动调用，任务返回的结果是：" + id + "    " + Thread.currentThread().getName();
+		return "111call()方法被自动调用，任务返回的结果是：" + id + "    " + Thread.currentThread().getName();
 	}
 }
