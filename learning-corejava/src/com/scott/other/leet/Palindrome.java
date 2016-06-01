@@ -1,4 +1,4 @@
-package com.scott.other;
+package com.scott.other.leet;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -34,15 +34,11 @@ public class Palindrome {
 	}
 
 	public static boolean test2(String number) {
-
 		while (number.length() > 1) {
-			String s = number.substring(0, 1);
-			if (!number.endsWith(s))
+			if (!number.endsWith(number.substring(0, 1)))
 				return false;
-			
 			number = number.substring(1, number.length() - 1);
 		}
-		
 		return true;
 	}
 
