@@ -1,8 +1,10 @@
 package com.scott.other.leet;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Set;
 
 public class RemoveDuplicatesFromSortedList {
 
@@ -21,7 +23,8 @@ public class RemoveDuplicatesFromSortedList {
 				add("555");
 			}
 		};
-		test1(list);
+//		test1(list);
+		test2(list);
 	}
 
 	private static void test1 (List<String> list) {
@@ -36,5 +39,13 @@ public class RemoveDuplicatesFromSortedList {
 				tempStr = str;
 		}
 		System.out.println(list);
+	}
+	
+	private static void test2 (List<String> list) {
+		Set<String> set = new HashSet<String>();
+		set.addAll(list);
+		
+		System.out.println("set:" + set);
+		
 	}
 }

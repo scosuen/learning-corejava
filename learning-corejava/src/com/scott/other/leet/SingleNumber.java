@@ -3,7 +3,7 @@ package com.scott.other.leet;
 public class SingleNumber {
 	
 	public static void main(String[] args) {
-		System.out.println(test1("112233445566"));
+		System.out.println(test1("11223344566666"));
 	}
 	
 	public static String test1 (String str) {
