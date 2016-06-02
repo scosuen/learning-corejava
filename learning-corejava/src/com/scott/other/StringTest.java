@@ -10,6 +10,10 @@ public class StringTest {
 
 		System.out.println(charAt("eqwer", 3));
 		
+		System.out.println("deleteFirst:" + deleteFirst("12345"));
+		
+		System.out.println("deleteByString:" + deleteByString("123456", "2"));
+		
 		test1();
 	}
 
@@ -19,6 +23,14 @@ public class StringTest {
 
 	static public String getLast(String str) {
 		return str.substring(str.length() - 1);
+	}
+	
+	public static String deleteFirst (String str) {
+		return str.substring(1);
+	}
+	
+	public static String deleteByString (String str, String deleteStr) {
+		return str.replace(deleteStr, "");
 	}
 
 	static public int indexOf(String str, String ch) {
