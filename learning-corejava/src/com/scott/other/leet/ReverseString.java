@@ -15,6 +15,8 @@ public class ReverseString {
 		StringBuilder result = new StringBuilder();
 		while (!stack.isEmpty())
 			result.append(stack.pop());
+		
+		System.out.println(result);
 	}
 	
 	

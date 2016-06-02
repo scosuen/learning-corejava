@@ -34,8 +34,14 @@ public class StringTest {
 		String b = "1";
 		String c = new String("1");
 		
-		System.out.println(a == b);
-		System.out.println(c == b);
+		String e = "11";
+		String d = "1" + "1";
+		
+		System.out.println("ab: " + (a == b));
+		System.out.println("cb: " + (c == b));
+		System.out.println("c.intern b: " + (c.intern() == b));
+		
+		System.out.println("ed: " + (e == d));
 		
 	}
 }
