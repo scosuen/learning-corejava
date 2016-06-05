@@ -10,9 +10,11 @@ public class StringTest {
 
 		System.out.println(charAt("eqwer", 3));
 		
-		System.out.println("deleteFirst:" + deleteFirst("12345"));
+		System.out.println("deleteFirst: " + deleteFirst("12345"));
 		
-		System.out.println("deleteByString:" + deleteByString("123456", "2"));
+		System.out.println("deleteByString: " + deleteByString("123456", "2"));
+		
+		System.out.println("deleteFirst: " + deleteFirst("aaasss", "a"));
 		
 		test1();
 	}
@@ -39,6 +41,10 @@ public class StringTest {
 
 	static public char charAt(String str, int index) {
 		return str.charAt(index);
+	}
+	
+	public static String deleteFirst (String str, String rep) {
+		return str.replaceFirst(rep, "");
 	}
 
 	public static void test1() {

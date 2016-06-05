@@ -1,4 +1,4 @@
-package com.scott.other.leet;
+package com.scott.other.algorithm;
 
 import java.util.LinkedList;
 import java.util.Queue;

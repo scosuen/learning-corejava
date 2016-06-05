@@ -1,4 +1,4 @@
-package com.scott.other.leet;
+package com.scott.other.algorithm;
 
 import java.util.ArrayList;
 import java.util.HashSet;
