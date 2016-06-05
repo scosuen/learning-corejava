@@ -9,7 +9,7 @@ public class AtomicIntegerArrayTest {
 	static AtomicIntegerArray ai = new AtomicIntegerArray(value);
 
 	public static void main(String[] args) {
-		ai.getAndSet(0, 3);
+		System.out.println("get and set:" + ai.getAndSet(0, 3));
 		System.out.println(ai.get(0) + ", " + ai.get(1));
 		System.out.println(value[0] + ", " + value[1]);
 	}
