@@ -7,7 +7,7 @@ public class FirstNonRepeat {
 
 	public static void main(String[] args) {
 		
-		String string = "aad";
+		String string = "aadcc";
 //		System.out.println(test1(string));
 		
 		System.out.println(test2(string));

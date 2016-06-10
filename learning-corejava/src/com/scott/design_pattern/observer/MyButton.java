@@ -6,7 +6,10 @@ public class MyButton extends Observable {
 	
 	private int count = 0;
 	
+	private MyButtonListener myButtonListener;
+	
 	public MyButton (MyButtonListener myButtonListener) {
+		this.myButtonListener = myButtonListener;
 		addObserver(myButtonListener);
 	}
 	
@@ -14,5 +17,8 @@ public class MyButton extends Observable {
 		setChanged();
 		notifyObservers(++count);
 	}
-
+	
+	private void onDestroy() {
+		deleteObserver(myButtonListener);
+	}
 }

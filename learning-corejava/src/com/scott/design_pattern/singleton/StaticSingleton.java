@@ -1,5 +1,12 @@
 package com.scott.design_pattern.singleton;
 
+/**
+ * 
+ * thread safe
+ * not lazy loading
+ * @author Ying
+ *
+ */
 public class StaticSingleton {
 
 	// 类加载时就初始化
