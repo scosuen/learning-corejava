@@ -1,6 +1,7 @@
 package com.scott.multi_thread.deadlock;
 
-import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
@@ -86,14 +87,16 @@ public class DeadlockTest {
 	}
 
 	public void test3() {
-		ThreadLocal<String> tlA = ThreadLocal.<String>withInitial(() -> {
+		ThreadLocal<String> tlA = ThreadLocal.<String> withInitial(() -> {
 			return resourceA;
 		});
 
-		ThreadLocal<String> tlB = ThreadLocal.<String>withInitial(() -> {
-			return resourceB;
-		});
-
+		ThreadLocal<String> tlB = new ThreadLocal<String>(){
+			protected String initialValue() {
+				return resourceB;
+			}
+		};
+		
 		new Thread(() -> {
 			System.out.println("Thread A: " + tlA.get());
 			tlA.set("resource A modified by Thread A");
@@ -105,12 +108,5 @@ public class DeadlockTest {
 			tlA.set("resource A modified by Thread A");
 			System.out.println("Thread B: " + tlA.get());
 		}).start();
-	}
-}
-
-class MyThreadLocal extends ThreadLocal<String> {
-	@Override
-	protected String initialValue() {
-		return super.initialValue();
 	}
 }
