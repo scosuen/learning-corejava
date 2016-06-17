@@ -1,7 +1,5 @@
 package com.scott.multi_thread.deadlock;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
@@ -46,8 +44,8 @@ public class DeadlockTest {
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
-				System.out.println(resourceA);
 				System.out.println(resourceB);
+				System.out.println(resourceA);
 			}
 		});
 	}

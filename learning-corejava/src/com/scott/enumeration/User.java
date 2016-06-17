@@ -6,7 +6,7 @@ public enum User {
 	Ke("222www", "22"),
 	Scott ("333eeee", "33");
 	
-	User (String pwd, String age) {
+	private User (String pwd, String age) {
 		this.pwd = pwd;
 		this.age = age;
 	}

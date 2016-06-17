@@ -1,7 +1,7 @@
 package com.scott.collection.compare;
 
+import java.security.KeyStore.PrivateKeyEntry;
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
 
@@ -17,7 +17,7 @@ public class CompareTest {
 
 	public static void main(String[] args) {
 //		test1();
-		test2();
+//		test2();
 	}
 
 	public static void test1() {

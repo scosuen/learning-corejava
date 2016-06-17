@@ -1,4 +1,4 @@
-package com.scott.other.algorithm;
+package com.scott.algorithm;
 
 import java.util.ArrayList;
 import java.util.List;
