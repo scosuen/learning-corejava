@@ -11,7 +11,7 @@ public class CachedThreadPoolTest {
 //      ExecutorService executorService = Executors.newFixedThreadPool(5);  
 //      ExecutorService executorService = Executors.newSingleThreadExecutor();  
         for (int i = 0; i < 20; i++){   
-            executorService.execute(() -> {
+            executorService.execute(() -> {//Runnable
             	
             	try {
             		int sec = new Random().nextInt(10);
@@ -21,6 +21,16 @@ public class CachedThreadPoolTest {
 					e.printStackTrace();
 				}
             });   
+            
+            executorService.submit(()->{ // Callable
+
+            	return null;
+            });
+            
+            executorService.submit(()->{ // Runnable
+            	System.out.println("submit Runnable");
+            });
+            
         }   
         executorService.shutdown();   
     }   
