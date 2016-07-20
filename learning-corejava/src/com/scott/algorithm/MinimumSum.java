@@ -8,6 +8,8 @@ package com.scott.algorithm;
  * (100+1000) + ((100+1000)+250) = 2450
  * 求最小值 (第一种情况)
  * 
+ * 只有一个element, 返回0
+ * 
  * @author Ying
  *
  */
