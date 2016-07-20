@@ -7,6 +7,8 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
 
+import javax.print.attribute.ResolutionSyntax;
+
 /**
  * 数组中两个元素相加等于指定数的所有组合
  * @author Ying
@@ -25,13 +27,18 @@ public class SumInArray {
 		HashSet<Integer> intSet = new HashSet<Integer>(Arrays.asList(arr));
 		Iterator<Integer> ite = intSet.iterator();
 		
+		Set<Integer> result = new HashSet<Integer>();
+		
 		while (ite.hasNext()) {
 			Integer i = ite.next();
 			if (intSet.contains(sum - i)) {
-				intSet.remove(Integer.valueOf(sum - i));
 				System.out.println("x:" + i + ", y:" + (sum - i));
+				result.add(i);
+				result.add(Integer.valueOf(sum - i));
 			}
 		}
+		
+		System.out.println(result);
 	}
 	
 	public static void test2 (Integer[] arr, Integer sum) {

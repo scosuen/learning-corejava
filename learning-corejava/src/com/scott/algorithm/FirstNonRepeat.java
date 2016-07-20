@@ -16,7 +16,7 @@ public class FirstNonRepeat {
 		// System.out.println("sdfsdf".indexOf('b'));
 		// System.out.println("aadd".replaceFirst(String.valueOf('a'), ""));
 	}
-
+	
 	public static List<Character> test2(String str) {
 		List<Character> chars = new ArrayList<Character>();
 

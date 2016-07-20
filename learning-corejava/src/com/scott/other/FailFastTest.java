@@ -24,7 +24,7 @@ public class FailFastTest {
 		while (i.hasNext()) {
 			String s = i.next();
 			if (s.equals("2"))
-//				list.remove(s);
+//				list.remove(s); // java.util.ConcurrentModificationException
 				i.remove();
 		}
 		

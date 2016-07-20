@@ -59,7 +59,7 @@ public class StringTest {
 		System.out.println("cb: " + (c == b));
 		System.out.println("c.intern b: " + (c.intern() == b));
 		
-		System.out.println("ed: " + (e == d));
+		System.out.println("e == d: " + (e == d));
 		
 	}
 }
