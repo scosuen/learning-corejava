@@ -2,6 +2,13 @@ package com.scott.multi_thread.wait_notify;
 
 public class WaitNotifyTest {
 
+	/**
+		print:
+		T1 start
+		T2 start count=0
+		T2 end count=4
+		Tread 1 count is 1.
+	*/
 	public static void main(String[] args) throws InterruptedException {
 		
 		class Count {
